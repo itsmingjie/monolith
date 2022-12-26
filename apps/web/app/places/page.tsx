@@ -1,10 +1,10 @@
-import { supabase } from "@/lib/supabase/client";
+import { createServerClient } from "@/lib/supabase/clients/server";
 import type { IPlace } from "@/lib/types/places";
-import { Construction } from "@/ui/construction";
 
 import { PlaceCard } from "./card/card";
 
 const PlacesPage = async (): Promise<JSX.Element> => {
+  const supabase = createServerClient();
   const { data: places } = await supabase.from("places").select(`
     id,
     name,
@@ -29,8 +29,6 @@ const PlacesPage = async (): Promise<JSX.Element> => {
           return <PlaceCard place={place} key={place.id} />;
         })}
       </div>
-
-      <Construction />
     </div>
   );
 };

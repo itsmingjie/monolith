@@ -1,10 +1,10 @@
-import { supabase } from "@/lib/supabase/client";
+import { createServerClient } from "@/lib/supabase/clients/server";
 import type { IThing } from "@/lib/types/things";
-import { Construction } from "@/ui/construction";
 
 import { ThingCard } from "./card/card";
 
 const ThingsPage = async (): Promise<JSX.Element> => {
+  const supabase = createServerClient();
   const { data: things } = await supabase.from("things").select(`
   id,
   name,
@@ -29,8 +29,6 @@ const ThingsPage = async (): Promise<JSX.Element> => {
           return <ThingCard thing={thing} key={thing.id} />;
         })}
       </div>
-
-      <Construction />
     </div>
   );
 };
