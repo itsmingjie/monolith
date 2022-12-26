@@ -1,4 +1,3 @@
-import { Construction } from "@/ui/construction";
 import { Link } from "@/ui/link";
 
 const Page = (): JSX.Element => {
@@ -44,8 +43,6 @@ const Page = (): JSX.Element => {
           .
         </p>
       </div>
-
-      <Construction />
     </div>
   );
 };
