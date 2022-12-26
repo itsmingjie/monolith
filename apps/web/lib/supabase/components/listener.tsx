@@ -12,7 +12,7 @@ export default function SupabaseListener({
   const router = useRouter();
 
   useEffect(() => {
-    createBrowserClient.auth.onAuthStateChange((_, session) => {
+    createBrowserClient().auth.onAuthStateChange((_, session) => {
       if (session?.access_token !== accessToken) {
         router.refresh();
       }

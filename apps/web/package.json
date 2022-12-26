@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/font": "^13.1.1",
     "@supabase/auth-helpers-nextjs": "^0.5.2",
+    "@supabase/auth-ui-react": "^0.2.6",
     "@supabase/supabase-js": "^2.2.2",
     "@types/node": "18.11.17",
     "@types/react": "18.0.26",
