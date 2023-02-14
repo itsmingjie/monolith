@@ -26,10 +26,10 @@ const RootLayout = async ({
 
   return (
     <html lang="en" className={clsx("h-full font-sans", archivo.variable)}>
-      <body className="relative flex items-stretch h-full gap-1">
+      <body className="relative flex items-stretch h-full">
         <SupabaseListener accessToken={session?.access_token} />
 
-        <aside className="flex-none order-1 hidden w-0 p-2 md:w-56 md:block">
+        <aside className="flex-none order-1 hidden w-0 pl-2 py-2 md:w-56 md:block">
           <Sidebar />
         </aside>
 
