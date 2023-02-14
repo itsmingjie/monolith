@@ -25,7 +25,7 @@ export const MenuHeader = (): JSX.Element => {
   };
 
   return (
-    <div className="flex items-center justify-between pb-2 pl-4 group gap-0.5">
+    <div className="flex items-center justify-between pb-2 px-4 group gap-0.5">
       <Link href="/" className="grow">
         <AnimatePresence mode="wait" initial={false}>
           {isEnglish ? (

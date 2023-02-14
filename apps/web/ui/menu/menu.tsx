@@ -1,4 +1,14 @@
-import { Cloud, Github, MapPin, Tag } from "lucide-react";
+import {
+  Cloud,
+  Github,
+  Headphones,
+  MapPin,
+  Music,
+  Paperclip,
+  Tag,
+  Twitter,
+} from "lucide-react";
+import { NowPlaying } from "../music/now-playing";
 
 import { MenuDivider } from "./menu-divider";
 import { MenuFooter } from "./menu-footer";
@@ -36,12 +46,28 @@ export const Sidebar = (): JSX.Element => {
           </MenuItem>
 
           <MenuItem
-            href="https://tea.codes/@itsmingjie"
-            icon={<Cloud size={16} />}
+            href="https://twitter.com/itsmingjie"
+            icon={<Twitter size={16} />}
             hint="@itsmingjie"
             external
           >
-            Mastodon
+            Twitter
+          </MenuItem>
+
+          <MenuItem
+            href="https://open.spotify.com/user/22wdi4mnztej5ni5yd4aktzba"
+            icon={<Headphones size={16} />}
+          >
+            Spotify
+          </MenuItem>
+
+          <MenuItem
+            href="https://read.cv/itsmingjie"
+            icon={<Paperclip size={16} />}
+            hint="read.cv"
+            external
+          >
+            Resume
           </MenuItem>
 
           {/* hidden link for verification */}
@@ -52,6 +78,7 @@ export const Sidebar = (): JSX.Element => {
       </div>
 
       <div className="flex flex-col gap-2">
+        <NowPlaying />
         <MenuFooter />
       </div>
     </nav>
