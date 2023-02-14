@@ -1,9 +1,7 @@
 import {
-  Cloud,
   Github,
   Headphones,
   MapPin,
-  Music,
   Paperclip,
   Tag,
   Twitter,
