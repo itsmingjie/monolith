@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Repeat } from "lucide-react";
+import Head from "next/head";
 import Link from "next/link";
 import { useId, useState } from "react";
 
