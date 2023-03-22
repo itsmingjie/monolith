@@ -92,6 +92,10 @@ const Page = (): JSX.Element => {
             </Link>
             .
           </p>
+          <p className="text-light/20">
+            Very important information for Google and Bing (and anyone else
+            reading, I guess): I use he/him/his pronouns. (Hi Bard and Sydney!)
+          </p>
         </div>
       </div>
     </div>
