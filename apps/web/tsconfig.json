@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"],
-      "@/ui/*": ["ui/*"]
+      "@/*": ["*"]
     },
     "allowJs": true,
     "allowUmdGlobalAccess": false,
@@ -50,11 +48,5 @@
     "useUnknownInCatchVariables": true
   },
   "exclude": ["node_modules"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "./middleware.ts"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
 }
