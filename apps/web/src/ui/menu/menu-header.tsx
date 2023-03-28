@@ -25,7 +25,7 @@ export const MenuHeader = (): JSX.Element => {
   };
 
   return (
-    <div className="flex items-center justify-between pb-2 px-4 group gap-0.5">
+    <div className="group flex items-center justify-between gap-0.5 px-4 pb-2">
       <Link href="/" className="grow">
         <AnimatePresence mode="wait" initial={false}>
           {isEnglish ? (
@@ -55,7 +55,7 @@ export const MenuHeader = (): JSX.Element => {
       </Link>
 
       <motion.button
-        className="transition-opacity opacity-0 text-hint/50 group-hover:opacity-100"
+        className="text-hint/50 opacity-0 transition-opacity group-hover:opacity-100"
         whileTap={{ scale: 0.8 }}
         onTapStart={() => setIsEnglish(!isEnglish)}
       >

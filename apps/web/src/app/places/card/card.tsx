@@ -19,7 +19,7 @@ export const PlaceCard = ({
   return (
     <a href={link} target="_blank" rel="noreferrer">
       <motion.div
-        className="flex flex-col w-96 gap-1 transition-all border rounded bg-light/5 border-hint/50 backdrop-blur-sm overflow-hidden cursor-pointer"
+        className="flex w-96 cursor-pointer flex-col gap-1 overflow-hidden rounded border border-hint/50 bg-light/5 backdrop-blur-sm transition-all"
         whileHover={{
           scale: 1.01,
         }}
@@ -27,9 +27,9 @@ export const PlaceCard = ({
           scale: 0.97,
         }}
       >
-        <div className="w-96 h-48 overflow-hidden object-center relative">
+        <div className="relative h-48 w-96 overflow-hidden object-center">
           {/* purple gradient overlay */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-purple/50 via-hint/50 to-transparent z-10" />
+          <div className="absolute top-0 left-0 z-10 h-full w-full bg-gradient-to-tr from-purple/50 via-hint/50 to-transparent" />
 
           <Image
             src={image}

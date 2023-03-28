@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 import { fetcher } from "@/lib/nextjs/fetch";
-import { clsx } from "@/lib/utils/clsx";
+import { cx } from "@/lib/utils/tailwind";
 
 interface ProgressProps {
   current: number;
@@ -47,11 +47,11 @@ export const Progress = ({
   }, [isPaused, mutate, spotify]);
 
   return (
-    <div className="flex items-center gap-1.5 h-1">
+    <div className="flex h-1 items-center gap-1.5">
       <AnimatePresence mode="wait">
         <motion.div
-          className={clsx(
-            "w-full h-1 rounded-full transition-colors",
+          className={cx(
+            "h-1 w-full rounded-full transition-colors",
             isPaused ? "bg-hint/20" : "bg-hint/50"
           )}
           transition={{
@@ -63,8 +63,8 @@ export const Progress = ({
           layoutId="progressBar"
         >
           <div
-            className={clsx(
-              "h-1 transition-all rounded-full",
+            className={cx(
+              "h-1 rounded-full transition-all",
               isPaused ? "bg-hint/50" : "bg-hint"
             )}
             style={{

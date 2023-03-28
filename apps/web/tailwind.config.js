@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
@@ -33,7 +32,7 @@ module.exports = {
     /** ==== end of override === */
     extend: {
       fontFamily: {
-        sans: ["var(--font-archivo)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-archivo)"],
       },
       boxShadow: {
         light: "0 1px 6px rgb(0 0 0 / 4%)",

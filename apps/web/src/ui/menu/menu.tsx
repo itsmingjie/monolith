@@ -8,7 +8,7 @@ import { MenuItem } from "./menu-item";
 
 export const Sidebar = (): JSX.Element => {
   return (
-    <nav className="flex flex-col justify-between h-full pt-4">
+    <nav className="flex h-full flex-col justify-between pt-4">
       <div className="flex flex-col gap-2">
         <MenuHeader />
 

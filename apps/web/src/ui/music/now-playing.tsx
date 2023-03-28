@@ -24,10 +24,10 @@ export const NowPlaying = (): JSX.Element => {
       href={spotify.item.external_urls.spotify}
       target="_blank"
       rel="noreferrer"
-      className="transition-colors text-hint hover:text-light"
+      className="text-hint transition-colors hover:text-light"
     >
       <motion.div
-        className="relative flex flex-col px-3 py-2 transition-colors border rounded-md bg-light/5 border-hint/50 backdrop-blur-sm shadow-black hover:bg-light/10 group/nowplaying"
+        className="group/nowplaying relative flex flex-col rounded-md border border-hint/50 bg-light/5 px-3 py-2 shadow-black backdrop-blur-sm transition-colors hover:bg-light/10"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
@@ -42,30 +42,30 @@ export const NowPlaying = (): JSX.Element => {
             exit={{ opacity: 0, height: 0 }}
           >
             <div className="flex items-center justify-between pb-2">
-              <div className="flex gap-1.5 items-center text-xs font-bold transition-colors text-hint">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-hint transition-colors">
                 <Music size={14} /> <h1>Listening to</h1>
               </div>
-              <span className="transition-colors text-hint hover:text-light">
+              <span className="text-hint transition-colors hover:text-light">
                 <ExternalLink size={12} />
               </span>
             </div>
           </motion.div>
         </AnimatePresence>
-        <div className="flex flex-col min-w-0 gap-3">
+        <div className="flex min-w-0 flex-col gap-3">
           <div className="flex items-start gap-2">
             <a
-              className="relative flex items-center w-8 h-8 overflow-hidden rounded-sm shrink-0 group/album"
+              className="group/album relative flex h-8 w-8 shrink-0 items-center overflow-hidden rounded-sm"
               href={spotify.item.album.external_urls.spotify}
               target="_blank"
               rel="noreferrer"
             >
               {spotify.is_playing === false && (
-                <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-all text-light bg-dark/50 group-hover/nowplaying:opacity-0">
+                <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-dark/50 text-light transition-all group-hover/nowplaying:opacity-0">
                   <Pause size={12} />
                 </div>
               )}
 
-              <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-all duration-200 opacity-0 text-light bg-dark/50 backdrop-blur-none group-hover/album:backdrop-blur-[2px] group-hover/album:opacity-100">
+              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-dark/50 text-light opacity-0 backdrop-blur-none transition-all duration-200 group-hover/album:opacity-100 group-hover/album:backdrop-blur-[2px]">
                 <ExternalLink size={12} />
               </div>
 
@@ -77,14 +77,14 @@ export const NowPlaying = (): JSX.Element => {
               />
             </a>
 
-            <div className="flex flex-col gap-0.5 min-w-0">
+            <div className="flex min-w-0 flex-col gap-0.5">
               <div className="flex items-center gap-2">
                 <h1 className="text-xs font-semibold text-light">
                   {spotify.item.name}
                 </h1>
               </div>
               <div>
-                <p className="overflow-hidden text-xs text-light/80 text-ellipsis whitespace-nowrap">
+                <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs text-light/80">
                   by{" "}
                   <span
                     className="font-semibold"

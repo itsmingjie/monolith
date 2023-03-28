@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+.vercel
+.history
+.githooks
+.vscode
+package-lock.json
+pnpm-lock.yaml
+yarn.lock

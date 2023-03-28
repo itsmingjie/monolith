@@ -1,9 +1,13 @@
 {
+  "extends": "@tsconfig/next/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": [
+        "*"
+      ]
     },
+    "ignoreDeprecations": "5.0",
     "allowJs": true,
     "allowUmdGlobalAccess": false,
     "allowUnreachableCode": false,
@@ -14,10 +18,14 @@
     "exactOptionalPropertyTypes": false,
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
+    "preserveValueImports": true,
     "incremental": true,
-    "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -36,7 +44,6 @@
         "name": "next"
       }
     ],
-    "preserveValueImports": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
@@ -45,8 +52,16 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "es5",
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "isolatedModules": true
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "./**/*.js",
+    ".next/types/**/*.ts"
+  ]
 }

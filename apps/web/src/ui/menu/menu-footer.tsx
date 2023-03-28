@@ -1,14 +1,14 @@
-import { Link } from "@/ui/link";
+import { Link } from "@/src/ui/link";
 
 export const MenuFooter = (): JSX.Element => {
   return (
     <footer>
-      <div className="flex justify-center w-full gap-2 text-xs tracking-wide">
+      <div className="flex w-full justify-center gap-2 text-xs tracking-wide">
         <div>
           <Link
             href="https://github.com/itsmingjie/monolith"
             external
-            className="transition-colors hover:text-light/40 text-light/20"
+            className="text-light/20 transition-colors hover:text-light/40"
           >
             @itsmingjie/monolith
           </Link>

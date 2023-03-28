@@ -1,12 +1,12 @@
-import { Link } from "@/ui/link";
+import { Link } from "@/src/ui/link";
 
 const Page = (): JSX.Element => {
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col gap-4 tracking-wide max-w-2xl leading-7">
-        <h1 className="text-4xl font-medium mb-4">Hi! I&rsquo;m Mingjie.</h1>
+      <div className="flex max-w-2xl flex-col gap-4 leading-7 tracking-wide">
+        <h1 className="mb-4 text-4xl font-medium">Hi! I&rsquo;m Mingjie.</h1>
 
-        <div className="flex flex-col gap-4 text-light/80 max-w-lg text-sm font-light leading-6 tracking-wide">
+        <div className="flex max-w-lg flex-col gap-4 text-sm font-light leading-6 tracking-wide text-light/80">
           <p>
             I&rsquo;m Mingjie, a web & product engineer. I love spending most of
             my day fiddling with UI in Figma and building ✨ shiny ✨
@@ -18,7 +18,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://www.crunchbase.com/organization/ender-3c26"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               Ender
             </Link>
@@ -27,7 +27,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://executebig.org"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               Execute Big
             </Link>
@@ -39,7 +39,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://hackclub.com"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               Hack Club
             </Link>{" "}
@@ -47,7 +47,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://codeday.org"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               CodeDay
             </Link>{" "}
@@ -56,7 +56,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://calhacks.io"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               Cal Hacks
             </Link>{" "}
@@ -64,7 +64,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://thefuture.build"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               Build the Future
             </Link>{" "}
@@ -78,7 +78,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://github.com/itsmingjie/monolith"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               GitHub
             </Link>
@@ -86,7 +86,7 @@ const Page = (): JSX.Element => {
             <Link
               href="https://twitter.com/itsmingjie"
               external
-              className="hover:underline text-purple"
+              className="text-purple hover:underline"
             >
               Twitter
             </Link>
