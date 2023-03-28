@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
 
-module.exports = {
+export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     /** ==== overrides === */
@@ -38,4 +38,4 @@ module.exports = {
       },
     },
   },
-};
+} satisfies Config;

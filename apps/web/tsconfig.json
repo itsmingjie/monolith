@@ -3,9 +3,10 @@
   "include": [
     "next-env.d.ts",
     "src",
-    "./**/*.js",
+    "./*.config.ts",
+    "./*.config.js",
     ".contentlayer/generated",
-    "contentlayer.config.ts"
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
