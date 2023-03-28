@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import querystring from "querystring";
 
 const {
@@ -29,7 +29,7 @@ const getAccessToken = async (): Promise<any> => {
   return await response.json();
 };
 
-export const getNowPlaying = async (): Promise<any> => {
+const getNowPlaying = async (): Promise<any> => {
   const { access_token } = await getAccessToken();
 
   const response = await fetch(NOW_PLAYING_ENDPOINT, {
@@ -45,12 +45,7 @@ export const getNowPlaying = async (): Promise<any> => {
   return await response.json();
 };
 
-const handler = async (
-  _: NextApiRequest,
-  res: NextApiResponse
-): Promise<void> => {
+export const GET = async () => {
   const nowPlaying = await getNowPlaying();
-  res.status(200).json(nowPlaying);
+  return NextResponse.json(nowPlaying);
 };
-
-export default handler;
