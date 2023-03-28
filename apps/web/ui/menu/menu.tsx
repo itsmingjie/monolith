@@ -1,11 +1,4 @@
-import {
-  Github,
-  Headphones,
-  MapPin,
-  Paperclip,
-  Tag,
-  Twitter,
-} from "lucide-react";
+import { Github, Headphones, MapPin, Paperclip, Twitter } from "lucide-react";
 import { NowPlaying } from "../music/now-playing";
 
 import { MenuDivider } from "./menu-divider";
@@ -24,10 +17,6 @@ export const Sidebar = (): JSX.Element => {
         <ul className="flex flex-col gap-1">
           <MenuItem href="/places" icon={<MapPin size={16} />}>
             Places
-          </MenuItem>
-
-          <MenuItem href="/things" icon={<Tag size={16} />}>
-            Things
           </MenuItem>
         </ul>
 
