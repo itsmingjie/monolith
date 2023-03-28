@@ -1,11 +1,18 @@
 {
   "extends": "@tsconfig/next/tsconfig.json",
+  "include": [
+    "next-env.d.ts",
+    "src",
+    "./**/*.js",
+    ".contentlayer/generated",
+    "contentlayer.config.ts"
+  ],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "*"
-      ]
+      "@/content": ["./.contentlayer/generated"],
+      "@/*": ["src/*"]
     },
     "ignoreDeprecations": "5.0",
     "allowJs": true,
@@ -21,11 +28,7 @@
     "preserveValueImports": true,
     "incremental": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -54,14 +57,5 @@
     "target": "es5",
     "useUnknownInCatchVariables": true,
     "isolatedModules": true
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "src",
-    "./**/*.js",
-    ".next/types/**/*.ts"
-  ]
+  }
 }
