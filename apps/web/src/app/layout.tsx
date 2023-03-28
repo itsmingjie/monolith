@@ -4,8 +4,8 @@ import { Archivo } from "@next/font/google";
 import type { PropsWithChildren } from "react";
 
 import { cx } from "@/lib/utils/tailwind";
-import { Sidebar } from "@/src/ui/menu";
-import { AnalyticsWrapper } from "@/src/ui/utilities/analytics";
+import { Sidebar } from "@/ui/menu";
+import { AnalyticsWrapper } from "@/ui/utilities/analytics";
 
 const archivo = Archivo({
   subsets: ["latin"],

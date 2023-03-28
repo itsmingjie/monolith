@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { Link } from "@/src/ui/link";
+import { Link } from "@/ui/link";
 
 interface MenuItemProps {
   href: string;

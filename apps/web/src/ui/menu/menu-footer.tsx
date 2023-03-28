@@ -1,4 +1,4 @@
-import { Link } from "@/src/ui/link";
+import { Link } from "@/ui/link";
 
 export const MenuFooter = (): JSX.Element => {
   return (
