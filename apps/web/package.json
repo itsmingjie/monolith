@@ -14,7 +14,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@next/font": "^13.2.4",
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.1",
     "framer-motion": "^10.9.1",

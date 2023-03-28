@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 
-import { Archivo } from "@next/font/google";
+import { Archivo } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
 import { cx } from "@/lib/utils/tailwind";
