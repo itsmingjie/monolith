@@ -1,5 +1,5 @@
-import { makeSource, defineDatabase } from "contentlayer-source-notion";
 import { Client } from "@notionhq/client";
+import { defineDatabase, makeSource } from "contentlayer-source-notion";
 
 const client = new Client({
   auth: process.env.NOTION_TOKEN as string,

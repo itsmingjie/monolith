@@ -57,7 +57,9 @@ export const MenuHeader = (): JSX.Element => {
       <motion.button
         className="text-hint/50 opacity-0 transition-opacity group-hover:opacity-100"
         whileTap={{ scale: 0.8 }}
-        onTapStart={() => setIsEnglish(!isEnglish)}
+        onTapStart={() => {
+          setIsEnglish(!isEnglish);
+        }}
       >
         <Repeat size={16} />
       </motion.button>

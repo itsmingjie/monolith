@@ -29,7 +29,7 @@ export const PlaceCard = ({
       >
         <div className="relative h-48 w-96 overflow-hidden object-center">
           {/* purple gradient overlay */}
-          <div className="absolute top-0 left-0 z-10 h-full w-full bg-gradient-to-tr from-purple/50 via-hint/50 to-transparent" />
+          <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-tr from-purple/50 via-hint/50 to-transparent" />
 
           <Image
             src={image}

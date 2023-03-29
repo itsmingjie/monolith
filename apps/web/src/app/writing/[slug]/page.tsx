@@ -1,13 +1,15 @@
+import dayjs from "dayjs";
+import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { allWritings } from "@/content";
-import dayjs from "dayjs";
 
-export async function generateStaticParams() {
+import { allWritings } from "@/content";
+
+export const generateStaticParams = async () => {
   return allWritings.map((post) => ({
     slug: post.slug,
   }));
-}
+};
 
 interface PostPageProps {
   params: {
@@ -15,7 +17,7 @@ interface PostPageProps {
   };
 }
 
-const PostPage = ({ params }: PostPageProps) => {
+const PostPage: NextPage<PostPageProps> = ({ params }: PostPageProps) => {
   const post = allWritings.find((post) => post.slug === params.slug);
 
   if (!post) {
@@ -31,21 +33,18 @@ const PostPage = ({ params }: PostPageProps) => {
         <div className="mb-6 text-center">
           <Link
             href="/"
-            className="text-blue-700 text-center text-sm font-bold uppercase"
+            className="text-center text-sm font-bold uppercase text-purple"
           >
             Home
           </Link>
         </div>
         <div className="mb-6 text-center">
           <h1 className="mb-1 text-3xl font-bold">{post.name}</h1>
-          <time dateTime={post.date} className="text-slate-600 text-sm">
+          <time dateTime={post.date} className="text-sm text-hint">
             {dayjs(post.date).format("MMMM D, YYYY")}
           </time>
         </div>
-        <div
-          className="cl-post-body"
-          dangerouslySetInnerHTML={{ __html: post.body.html }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
       </article>
     </>
   );

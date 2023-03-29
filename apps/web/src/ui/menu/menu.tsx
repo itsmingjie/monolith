@@ -1,6 +1,6 @@
 import { Github, Headphones, MapPin, Paperclip, Twitter } from "lucide-react";
-import { NowPlaying } from "../music/now-playing";
 
+import { NowPlaying } from "../music/now-playing";
 import { MenuDivider } from "./menu-divider";
 import { MenuFooter } from "./menu-footer";
 import { MenuHeader } from "./menu-header";

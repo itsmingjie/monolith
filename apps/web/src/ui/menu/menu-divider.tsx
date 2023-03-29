@@ -4,7 +4,7 @@ interface MenuDividerProps {
 
 export const MenuDivider = ({ title }: MenuDividerProps): JSX.Element => {
   return (
-    <div className="mt-4 mb-1 ml-4 flex items-center">
+    <div className="mb-1 ml-4 mt-4 flex items-center">
       {title && (
         <h2 className="text-xs font-semibold tracking-wide text-light/30">
           {title}

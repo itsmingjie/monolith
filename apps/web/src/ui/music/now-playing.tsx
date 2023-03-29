@@ -15,7 +15,7 @@ export const NowPlaying = (): JSX.Element => {
     revalidateOnFocus: true,
   });
 
-  if (!spotify || !spotify.item) {
+  if (!spotify ?? !spotify.item) {
     return <></>;
   }
 
@@ -60,12 +60,12 @@ export const NowPlaying = (): JSX.Element => {
               rel="noreferrer"
             >
               {spotify.is_playing === false && (
-                <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-dark/50 text-light transition-all group-hover/nowplaying:opacity-0">
+                <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-dark/50 text-light transition-all group-hover/nowplaying:opacity-0">
                   <Pause size={12} />
                 </div>
               )}
 
-              <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center bg-dark/50 text-light opacity-0 backdrop-blur-none transition-all duration-200 group-hover/album:opacity-100 group-hover/album:backdrop-blur-[2px]">
+              <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-dark/50 text-light opacity-0 backdrop-blur-none transition-all duration-200 group-hover/album:opacity-100 group-hover/album:backdrop-blur-[2px]">
                 <ExternalLink size={12} />
               </div>
 
