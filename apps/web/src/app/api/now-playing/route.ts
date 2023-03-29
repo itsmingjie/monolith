@@ -1,3 +1,4 @@
+import type { NextApiHandler } from "next";
 import { NextResponse } from "next/server";
 import querystring from "querystring";
 
@@ -10,8 +11,9 @@ const {
 const BASIC_AUTH_TOKEN = Buffer.from(`${client_id}:${client_secret}`).toString(
   "base64"
 );
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
-const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+const NOW_PLAYING_ENDPOINT =
+  "https://api.spotify.com/v1/me/player/currently-playing";
+const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 
 const getAccessToken = async (): Promise<any> => {
   const response = await fetch(TOKEN_ENDPOINT, {
@@ -45,7 +47,7 @@ const getNowPlaying = async (): Promise<any> => {
   return await response.json();
 };
 
-export const GET = async () => {
+export const GET: NextApiHandler = async () => {
   const nowPlaying = await getNowPlaying();
   return NextResponse.json(nowPlaying);
 };

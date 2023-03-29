@@ -30,7 +30,9 @@ export const Progress = ({
       }
     }, 50);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+    };
   }, [isPaused]);
 
   useEffect(() => {

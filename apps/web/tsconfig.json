@@ -3,16 +3,17 @@
   "include": [
     "next-env.d.ts",
     "src",
-    "./**/*.js",
+    "contentlayer.config.ts",
     ".contentlayer/generated",
-    "contentlayer.config.ts"
+    "./**/*.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/content": ["./.contentlayer/generated"],
-      "@/*": ["src/*"]
+      "@/*": ["*"],
+      "@/content": ["../.contentlayer/generated"]
     },
     "ignoreDeprecations": "5.0",
     "allowJs": true,
