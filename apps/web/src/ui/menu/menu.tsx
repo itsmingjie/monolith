@@ -1,4 +1,4 @@
-import { Github, Headphones, MapPin, Paperclip, Twitter } from "lucide-react";
+import { FileText, Github, MapPin, Music, Twitter } from "lucide-react";
 
 import { NowPlaying } from "../music/now-playing";
 import { MenuDivider } from "./menu-divider";
@@ -42,19 +42,21 @@ export const Sidebar = (): JSX.Element => {
           </MenuItem>
 
           <MenuItem
-            href="https://open.spotify.com/user/22wdi4mnztej5ni5yd4aktzba"
-            icon={<Headphones size={16} />}
+            href="https://music.apple.com/profile/itsmingjie"
+            icon={<Music size={16} />}
+            hint="@itsmingjie"
+            external
           >
-            Spotify
+            Apple Music
           </MenuItem>
 
           <MenuItem
             href="https://read.cv/itsmingjie"
-            icon={<Paperclip size={16} />}
-            hint="read.cv"
+            icon={<FileText size={16} />}
+            hint="@itsmingjie"
             external
           >
-            Resume
+            Read.cv
           </MenuItem>
 
           {/* hidden link for verification */}
