@@ -1,6 +1,6 @@
 import { FileText, Github, MapPin, Music, Twitter } from "lucide-react";
 
-import { NowPlaying } from "../music/now-playing";
+// import { NowPlaying } from "../music/now-playing";
 import { MenuDivider } from "./menu-divider";
 import { MenuFooter } from "./menu-footer";
 import { MenuHeader } from "./menu-header";
@@ -67,7 +67,7 @@ export const Sidebar = (): JSX.Element => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <NowPlaying />
+        {/* <NowPlaying /> */}
         <MenuFooter />
       </div>
     </nav>

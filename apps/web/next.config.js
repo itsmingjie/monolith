@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const { withContentlayer } = require("next-contentlayer");
+const withMdx = require("@next/mdx")();
 
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
     appDir: true,
+    mdxRs: true,
   },
+  pageExtensions: ["ts", "tsx", "js", "jsx", "mdx"],
   images: {
     remotePatterns: [
       {
@@ -25,4 +28,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(nextConfig);
+module.exports = withMdx(withContentlayer(nextConfig));
