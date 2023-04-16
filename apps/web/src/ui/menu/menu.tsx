@@ -1,4 +1,12 @@
-import { FileText, Github, MapPin, Music, Twitter } from "lucide-react";
+import {
+  Briefcase,
+  CalendarDays,
+  FileText,
+  Github,
+  MapPin,
+  Music,
+  Twitter,
+} from "lucide-react";
 
 // import { NowPlaying } from "../music/now-playing";
 import { MenuDivider } from "./menu-divider";
@@ -17,6 +25,14 @@ export const Sidebar = (): JSX.Element => {
         <ul className="flex flex-col gap-1">
           <MenuItem href="/places" icon={<MapPin size={16} />}>
             Places
+          </MenuItem>
+
+          <MenuItem
+            href="https://music.apple.com/profile/itsmingjie"
+            icon={<Music size={16} />}
+            external
+          >
+            Music
           </MenuItem>
         </ul>
 
@@ -42,21 +58,23 @@ export const Sidebar = (): JSX.Element => {
           </MenuItem>
 
           <MenuItem
-            href="https://music.apple.com/profile/itsmingjie"
-            icon={<Music size={16} />}
-            hint="@itsmingjie"
+            href="https://cal.com/mingjie"
+            icon={<CalendarDays size={16} />}
+            hint="cal.com/mingjie"
             external
           >
-            Apple Music
+            Meet
           </MenuItem>
+
+          <MenuDivider title="Info" />
 
           <MenuItem
             href="https://read.cv/itsmingjie"
-            icon={<FileText size={16} />}
-            hint="@itsmingjie"
+            icon={<Briefcase size={16} />}
+            hint="read.cv/itsmingjie"
             external
           >
-            Read.cv
+            CV
           </MenuItem>
 
           {/* hidden link for verification */}
