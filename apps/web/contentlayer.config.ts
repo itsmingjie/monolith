@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
 import { defineDatabase, makeSource } from "contentlayer-source-notion";
+import rehypePrism from "rehype-prism-plus";
 
 const client = new Client({
   auth: process.env.NOTION_TOKEN as string,
@@ -32,4 +33,7 @@ export const WritingType = defineDatabase(() => ({
 export default makeSource({
   client,
   databaseTypes: [WritingType],
+  mdx: {
+    rehypePlugins: [rehypePrism],
+  },
 });

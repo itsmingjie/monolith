@@ -4,6 +4,7 @@
     "next-env.d.ts",
     "src",
     "contentlayer.config.ts",
+    "mdx-components.tsx",
     ".contentlayer/generated",
     "./**/*.js",
     ".next/types/**/*.ts"
