@@ -1,7 +1,6 @@
 import {
   Briefcase,
   CalendarDays,
-  FileText,
   Github,
   MapPin,
   Music,
