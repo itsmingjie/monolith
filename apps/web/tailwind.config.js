@@ -61,6 +61,10 @@ module.exports = {
               background: "var(--tw-prose-pre-bg)",
               borderRadius: "4px",
             },
+
+            a: {
+              textDecoration: "none",
+            },
           },
         },
       }),
