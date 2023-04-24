@@ -26,6 +26,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/ft",
+        destination: "/facetime",
+      },
+    ];
+  },
 };
 
 module.exports = withMdx(withContentlayer(nextConfig));
