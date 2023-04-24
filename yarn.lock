@@ -352,6 +352,11 @@
     jsbi "^4.1.0"
     tslib "^2.3.1"
 
+"@marsidev/react-turnstile@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@marsidev/react-turnstile/-/react-turnstile-0.1.2.tgz#45a5c24814341b081169c8d76f08a2dba0524723"
+  integrity sha512-aL1/AdES53yxPJKodT20qwJ9Fs0ZcnYRS+Z7yA8iGGFAi4roOS9iB12Ss7GJrm896hXW/YnW1aAPxc079Sad7A==
+
 "@mdx-js/esbuild@^2.0.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/esbuild/-/esbuild-2.3.0.tgz#97f2f1b854d904c50bcd0a219b3664657f4fe8c3"
