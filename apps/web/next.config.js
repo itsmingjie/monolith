@@ -34,6 +34,17 @@ const nextConfig = {
       },
     ];
   },
+  // redirects
+  async redirects() {
+    return [
+      {
+        source: "/travel",
+        destination:
+          "https://mingjie.notion.site/mingjie/e2dde52ddfa446d799b45649f6869f34",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = withMdx(withContentlayer(nextConfig));
