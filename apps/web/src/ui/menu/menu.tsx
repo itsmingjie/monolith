@@ -23,17 +23,9 @@ export const Sidebar = (): JSX.Element => {
 
         <ul className="flex flex-col gap-1">
           <MenuItem href="https://www.corner.inc/itsmingjie"
-            hint="corner.inc/@"
+            hint="corner.inc"
           external icon={<MapPin size={16} />}>
             Places
-          </MenuItem>
-
-          <MenuItem
-            href="https://music.apple.com/profile/itsmingjie"
-            icon={<Music size={16} />}
-            external
-          >
-            Music
           </MenuItem>
         </ul>
 
@@ -61,7 +53,7 @@ export const Sidebar = (): JSX.Element => {
           <MenuItem
             href="https://cal.com/mingjie"
             icon={<CalendarDays size={16} />}
-            hint="cal.com/mingjie"
+            hint="cal.com"
             external
           >
             Meet
@@ -70,9 +62,9 @@ export const Sidebar = (): JSX.Element => {
           <MenuDivider title="Info" />
 
           <MenuItem
-            href="https://read.cv/itsmingjie"
+            href="https://cv.mingjie.dev"
             icon={<Briefcase size={16} />}
-            hint="read.cv/itsmingjie"
+            hint="read.cv"
             external
           >
             CV

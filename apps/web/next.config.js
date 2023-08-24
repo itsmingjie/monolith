@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const withMdx = require("@next/mdx")();
+const million = require("million/compiler")
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -35,4 +35,8 @@ const nextConfig = {
   },
 };
 
-module.exports = withMdx(nextConfig);
+const millionConfig = {
+  auto: { rsc: true },
+}
+
+module.exports = million.next(nextConfig, millionConfig);
