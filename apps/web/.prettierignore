@@ -5,7 +5,6 @@ dist
 .history
 .githooks
 .vscode
-.contentlayer
 .cache
 package-lock.json
 pnpm-lock.yaml

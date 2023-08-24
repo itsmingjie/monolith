@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@itsmingjie/web",
   "version": "0.1.0",
   "engines": {
     "node": ">=18.0.0 <19.0.0"
@@ -21,15 +21,12 @@
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/analytics": "^0.1.11",
     "clsx": "^1.2.1",
-    "contentlayer": "^0.3.0",
-    "contentlayer-source-notion": "^0.0.1-alpha.13",
     "dayjs": "^1.11.7",
     "framer-motion": "^10.9.1",
     "highlight.js": "^11.7.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.128.0",
     "next": "13.2.4",
-    "next-contentlayer": "^0.3.0",
     "querystring": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -66,6 +63,7 @@
     "postcss": "^8.4.21",
     "prettier-plugin-tailwindcss": "^0.2.5",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "@itsmingjie/tsconfig": "*"
   }
 }

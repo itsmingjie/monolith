@@ -10,10 +10,10 @@ const MarkdownLayout = async ({
 }: PropsWithChildren): Promise<JSX.Element> => {
   return (
     <RootLayout>
-      <main className="relative order-2 m-2 w-full overflow-auto rounded-md border border-hint/50 bg-light/5 shadow-black backdrop-blur-sm">
+      <main className="border-hint/50 bg-light/5 relative order-2 m-2 w-full overflow-auto rounded-md border shadow-black backdrop-blur-sm">
         <TopBar />
 
-        <div className="prose prose-dracula mx-auto w-full max-w-2xl px-4 py-12 pb-10 text-light md:px-8">
+        <div className="text-light mx-auto w-full max-w-2xl px-4 py-12 pb-10 md:px-8">
           {children}
         </div>
       </main>

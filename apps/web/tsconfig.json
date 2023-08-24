@@ -1,63 +1,12 @@
 {
-  "extends": "@tsconfig/next/tsconfig.json",
-  "include": [
-    "next-env.d.ts",
-    "src",
-    "contentlayer.config.ts",
-    "mdx-components.tsx",
-    ".contentlayer/generated",
-    "./**/*.js",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"],
+  "extends": "@itsmingjie/tsconfig/nextjs.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    "plugins": [{ "name": "next" }],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@/content": ["../.contentlayer/generated"]
-    },
-    "ignoreDeprecations": "5.0",
-    "allowJs": true,
-    "allowUmdGlobalAccess": false,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "alwaysStrict": true,
-    "downlevelIteration": true,
-    "esModuleInterop": true,
-    "exactOptionalPropertyTypes": false,
-    "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
-    "preserveValueImports": true,
-    "incremental": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": false,
-    "noResolve": false,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "es5",
-    "useUnknownInCatchVariables": true,
-    "isolatedModules": true
-  }
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

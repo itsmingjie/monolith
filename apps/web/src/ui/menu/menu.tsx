@@ -22,7 +22,9 @@ export const Sidebar = (): JSX.Element => {
         <MenuDivider title="Collections" />
 
         <ul className="flex flex-col gap-1">
-          <MenuItem href="/places" icon={<MapPin size={16} />}>
+          <MenuItem href="https://www.corner.inc/itsmingjie"
+            hint="corner.inc/@"
+          external icon={<MapPin size={16} />}>
             Places
           </MenuItem>
 
@@ -83,8 +85,7 @@ export const Sidebar = (): JSX.Element => {
         </ul>
       </div>
 
-      <div className="flex flex-col gap-2">
-        {/* <NowPlaying /> */}
+      <div className="flex flex-col gap-2">x
         <MenuFooter />
       </div>
     </nav>

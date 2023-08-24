@@ -34,41 +34,6 @@ module.exports = {
       gridTemplateColumns: {
         "fill-3": "repeat(auto-fill, minmax(396px, 3fr))",
       },
-      typography: ({ theme }) => ({
-        dracula: {
-          css: {
-            "--tw-prose-body": theme("colors.light/50"),
-            "--tw-prose-headings": theme("colors.light"),
-            "--tw-prose-lead": theme("colors.light"),
-            "--tw-prose-bold": theme("colors.light"),
-            "--tw-prose-links": theme("colors.purple"),
-            "--tw-prose-counters": theme("colors.hint"),
-            "--tw-prose-pre-bg": theme("colors.dark"),
-            "--tw-prose-bullets": theme("colors.pink[400]"),
-            "--tw-prose-hr": theme("colors.pink[300]"),
-            "--tw-prose-quotes": theme("colors.pink[900]"),
-            "--tw-prose-quote-borders": theme("colors.pink[300]"),
-            "--tw-prose-captions": theme("colors.pink[700]"),
-            "--tw-prose-code": theme("colors.pink[900]"),
-            "--tw-prose-pre-code": theme("colors.pink[100]"),
-            "--tw-prose-th-borders": theme("colors.pink[300]"),
-            "--tw-prose-td-borders": theme("colors.pink[200]"),
-
-            pre: {
-              padding: "12px",
-              display: "block",
-              overflowX: "auto",
-              background: "var(--tw-prose-pre-bg)",
-              borderRadius: "4px",
-            },
-
-            a: {
-              textDecoration: "none",
-            },
-          },
-        },
-      }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
 };
